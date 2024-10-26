@@ -13,14 +13,14 @@
     <div>
         <img id="my-img" alt="photo">
         <form action="/orders" method="post">
-        <fieldset>
+        <fieldset style="width:0.5em;">
         <div>
-            <p>
+            <p style="color: purple; text-align: center;background-color:lightpink;">
                 <label for="customer_name">Customer Name</label>
                 <input type="text" id="customer_name" name="name"/>
             </p>
 
-            <p>
+            <p style="color: purple; text-align: center;background-color:lightpink;">
                 <label for="food_type">What do you want to order?</label>
                 <select name="food_list" id="food_list">
                     <option value="choose_pastry">Choose your pastries!</option>
@@ -29,13 +29,13 @@
                     <option value="pink_cupcake">Pink Cupcake</option>
                 </select>
             </p>
-            <p>
+            <p style="color: purple; text-align: center;background-color:lightpink;">
                 <label for="amount">How much would you like to order?</label>
                 <input type="number" id="amount" step="0.25" name="how_much">
             </p>
 
             <p class="button">
-                <button action="/images" type="submit">Welcome to the Bakery!</button>
+                <button action="/images" type="submit">Place your order!</button>
             </p>
         </div>
         </fieldset>
