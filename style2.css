@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: arial black, sans-serif;
+}
+
+
 body {
     background-color: rgb(132, 132, 171);
 }
@@ -5,11 +13,30 @@ body {
 .menu {
     display: flex;
     width: 100%;
-    max-width: 2000px;
-    width: 2000px;
+    width: 1300px;
     height: 200px;
-    background-color: brown;
+    background-color: rgb(212, 121, 139);
     justify-content: center;
+    align-items: center;
     z-index: 100;
     margin: 0 auto;
+}
+
+.menu_btns {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 auto;
+
+}
+
+.button {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: black;
 }

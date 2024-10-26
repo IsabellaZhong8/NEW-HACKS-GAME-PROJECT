@@ -4,19 +4,11 @@
   margin: 20px;
 }
 
-<<<<<<< HEAD
-.button a{
-  color:white;
-  font-family:'Courier New', monospace;
-  font-weight:bold;
-  font-size:100px;
-=======
 .button a {
   color: white;
   font-family: 'Courier New', monospace;
   font-weight: bold;
   font-size: 36px;
->>>>>>> 623a9402632e897a38abc8cc971c963ba011baf4
   text-align: center;
   text-decoration: none;
   background-color: #fc74bf;
