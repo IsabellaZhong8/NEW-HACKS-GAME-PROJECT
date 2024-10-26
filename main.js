@@ -9,8 +9,6 @@ myImage.onClick = () => {
     }
 };
 
-
-
 class Food {
     constructor(food_name, price) {
         this.food_name = food_name;
