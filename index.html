@@ -13,14 +13,32 @@
     <div>
         <img id="my-img" alt="photo">
         <form action="/orders" method="post">
+        <fieldset>
+        <div>
             <p>
                 <label for="customer_name">Customer Name</label>
                 <input type="text" id="customer_name" name="name"/>
             </p>
-            <p class="button">
-                <button type="submit">Welcome!</button>
 
+            <p>
+                <label for="food_type">What do you want to order?</label>
+                <select name="food_list" id="food_list">
+                    <option value="choose_pastry">Choose your pastries!</option>
+                    <option value="blueberry_muffin">Blueberry Muffin</option>
+                    <option value="apple_pie">Apple Pie</option>
+                    <option value="pink_cupcake">Pink Cupcake</option>
+                </select>
             </p>
+            <p>
+                <label for="amount">How much would you like to order?</label>
+                <input type="text" id="amount" name="how_much">
+            </p>
+
+            <p class="button">
+                <button action="/images" type="submit">Welcome to the Bakery!</button>
+            </p>
+        </div>
+        </fieldset>
         </form>
     </div>
     <script src="main.js" type="text/javascript"></script>
