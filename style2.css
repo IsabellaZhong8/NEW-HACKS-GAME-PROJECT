@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(132, 132, 171);
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    width: 2000px;
+    height: 200px;
+    background-color: brown;
+    justify-content: center;
+    z-index: 100;
+    margin: 0 auto;
+}
