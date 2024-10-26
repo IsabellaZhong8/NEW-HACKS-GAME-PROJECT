@@ -1,61 +1,53 @@
-.button {
-  position: relative;
-  display: inline-block;
-  margin: 20px;
+.button{
+  position:relative;
+  display:inline-block;
+  margin:20px;
 }
 
-<<<<<<< HEAD
 .button a{
   color:white;
   font-family:'Courier New', monospace;
   font-weight:bold;
   font-size:100px;
-=======
-.button a {
-  color: white;
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-  font-size: 36px;
->>>>>>> 623a9402632e897a38abc8cc971c963ba011baf4
   text-align: center;
-  text-decoration: none;
-  background-color: #fc74bf;
-  display: block;
-  position: relative;
-  padding: 20px 40px;
-
+  text-decoration:none;
+  background-color:#fc74bf;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
-
-  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
-  -moz-box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
-  box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
-
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #910007;
+  
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
-.button a:active {
-  top: 10px;
-  background-color: #fb2d9e;
-
-  -webkit-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #910007;
-  -moz-box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #910007;
-  box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #910007;
+.button a:active{
+  top:10px;
+  background-color:#fb2d9e;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #910007;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #910007;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #910007;
 }
 
-.button:after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  padding: 4px;
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
   position: absolute;
-  bottom: -15px;
-  left: -4px;
-  z-index: -1;
-  background-color: #2B1800;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -68,22 +60,18 @@
   height: 100vh;
 }
 
-html,
-body {
-  overflow: hidden;
-  height: 100%;
-}
+html, body{
+  overflow: hidden; 
+  height: 100%;  
+} 
 
 body {
   display: flex;
   justify-content: center;
   background-image: url("cutebakery.jpg");
-  background-size: cover;
-  /* Scale the image to cover the full viewport */
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Prevent tiling */
+  background-size: cover;        /* Scale the image to cover the full viewport */
+  background-position: center;   /* Center the image */
+  background-repeat: no-repeat;  /* Prevent tiling */
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -101,25 +89,26 @@ body {
 /* Image Styling */
 img.floating {
   position: absolute;
-  top: 20px;
-  /* Distance from the top of the screen */
-  left: 20px;
-  /* Distance from the left of the screen */
-  width: 20%;
-  /* Adjust to make the image smaller */
+  top: 20px;     /* Distance from the top of the screen */
+  left: 20px;    /* Distance from the left of the screen */
+  width: 30%;  /* Adjust to make the image smaller */
   animation: float 2s ease-in-out infinite;
+}
+
+img.image2 {
+  position: absolute; 
+  margin-bottom: 100px; /* Space from the bottom */
+  right: 20px; /* Adjust size as needed */
+  width: 40%; 
+  animation: float 2s ease-in-out infinite; /* Use the same animation */
 }
 
 /* Keyframes for Floating Animation */
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-20px);
-    /* Increased distance for more visible bobbing */
+    transform: translateY(-20px); /* Increased distance for more visible bobbing */
   }
 }
