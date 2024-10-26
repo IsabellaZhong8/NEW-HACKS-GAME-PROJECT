@@ -34,7 +34,7 @@ function askQuestion() {
     const fraction2 = generateRandomFraction();
 
     // Display the question to the user
-    const userAnswer = prompt(`Add the fractions: ${fraction1.numerator}/${fraction1.denominator} + ${fraction2.numerator}/${fraction2.denominator}. Enter your answer in the form 'numerator/denominator':`);
+    const userAnswer = prompt(`The customer wants: ${fraction1.numerator}/${fraction1.denominator} of an apple pie + ${fraction2.numerator}/${fraction2.denominator} of a blueberry pie. How much pie do they want in total?':`);
 
     // Calculate the correct answer
     const correctAnswer = addFractions(fraction1, fraction2);
@@ -42,14 +42,16 @@ function askQuestion() {
 
     // Check if the user's answer is correct
     if (userAnswer === correctAnswerStr) {
-        alert("Correct! Well done!");
+        alert(`Correct! The customer wants ${correctAnswerStr} pie in total.`);
+        counter = counter + 1
     } else {
-        alert(`Incorrect. The correct answer is ${correctAnswerStr}.`);
+        alert(`Incorrect. The customer wants ${correctAnswerStr} pie in total.`);
     }
 }
 
 // Call the askQuestion function each time you want to ask a new question
 askQuestion();
+
 myImage.onClick = () => {
     const mySrc = myImage.getAttribute("src");
     if (mySrc === "https://iili.io/2qSvw7a.md.png") {
@@ -100,7 +102,7 @@ class Game {
     }
 }
 
-    show_order(customer) {
+    show_order(customer); {
         const order_text = document.getElementById('order');
         let message = 'Can I get ';
 
@@ -111,7 +113,7 @@ class Game {
     }
 
 
-}
+
 
 
 
