@@ -70,7 +70,6 @@ class Food {
 }
 
 
-
 class Customer {
     constructor(first_name, order) {
         this.first_name = first_name;
@@ -82,20 +81,26 @@ class Customer {
 
 class Game {
     show_learning_prompt(topic) {
-        prompt = ''
+        let prompt = '';
         switch (topic) {
             case 'Fractions':
-                prompt = '';
-            case 'Divison':
-                prompt = '';
+                prompt = 'Let’s explore fractions together!';
+                break;
+            case 'Division':
+                prompt = 'Let’s dive into division!';
+                break;
             case 'Literacy':
-                prompt = '';
+                prompt = 'Ready to boost your literacy skills?';
+                break;
             case 'Programming':
-                prompt = '';
+                prompt = 'Time to code and learn programming!';
+                break;
             default:
                 throw new Error('This is not a valid topic!');
         }
+        return prompt;
     }
+}
 
     show_order(customer) {
         const order_text = document.getElementById('order');

@@ -8,7 +8,7 @@
   color: white;
   font-family: 'Courier New', monospace;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 100px;
   text-align: center;
   text-decoration: none;
   background-color: #fc74bf;
@@ -82,12 +82,6 @@ body {
   padding: 0;
   background-color: #cccccc;
   background-repeat: no-repeat;
-}
-
-.image {
-  position: absolute;
-  z-index: -999;
-  opacity: 0;
 }
 
 /* Image Styling */
