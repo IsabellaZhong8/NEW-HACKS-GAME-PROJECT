@@ -91,7 +91,7 @@ img.floating {
   position: absolute;
   top: 20px;     /* Distance from the top of the screen */
   left: 20px;    /* Distance from the left of the screen */
-  width: 100%;  /* Adjust to make the image smaller */
+  width: 30%;  /* Adjust to make the image smaller */
   animation: float 2s ease-in-out infinite;
 }
 
