@@ -42,7 +42,7 @@ function askQuestion() {
 
     // Check if the user's answer is correct
     if (userAnswer === correctAnswerStr) {
-        alert("Correct! The customer wants ${correctAnswerStr} pie in totall");
+        alert(`Correct! The customer wants ${correctAnswerStr} pie in total.`);
         counter = counter + 1
     } else {
         alert(`Incorrect. The customer wants ${correctAnswerStr} pie in total.`);
@@ -102,7 +102,7 @@ class Game {
     }
 }
 
-    show_order(customer) {
+    show_order(customer); {
         const order_text = document.getElementById('order');
         let message = 'Can I get ';
 
@@ -113,7 +113,7 @@ class Game {
     }
 
 
-}
+
 
 
 
