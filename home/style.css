@@ -52,6 +52,11 @@
     height: 100vh;
 }
 
+html, body{
+  overflow: hidden; 
+  height: 100%;  
+}
+
 body {
   background-image: url("cutebakery.jpg");
   background-size: cover;        /* Scale the image to cover the full viewport */
