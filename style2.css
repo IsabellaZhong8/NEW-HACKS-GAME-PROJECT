@@ -22,7 +22,7 @@ body {
     margin: 0 auto;
 }
 
-.menu_btns {
+.menu_items {
     display: flex;
     justify-content: space-between;
     height: 80px;
