@@ -7,16 +7,22 @@
   <title>Main Game</title>
 </head>
 <body>
-  <div class="menu">
-    <div class="menu_items" style = "color:white">
-      <div class="button">back</div>
-      <div class="button">menu</div>
-      <div class="button">money</div>
-    </div>
 
-    <div class="counter-display">
-    </div>
+  <div class="navigation">
+    <ul>
+      <script>
+        let icons = ["home", "person", "chatbubble", "camera", "settings"]
+        for (let i of icons) {
+          document.write(`<li><a href="#"><span class="icon"><ion-icon name="${i}-outline"></ion-icon></span></a></li>`); 
+        }
+      </script>
+      <div class="indicator"><span></span></div>
+    </ul>
   </div>
-  <script src="main.js"></script>
+
+  <div class="counter-display"></div>
+
+
+    
 </body>
 </html>
