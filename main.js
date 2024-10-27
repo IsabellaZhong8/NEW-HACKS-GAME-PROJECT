@@ -98,9 +98,9 @@ class Customer {
             message += `${quantity} ${foodItem.food_name}${plural}${add} `;
         }
 
-        document.getElementById('customer_name').innerHTML = `${this.first_name}`
-        document.getElementById('order').innerHTML = message.trim() + '?';
 
+        document.getElementById('order').innerHTML = message.trim() + '?';
+        document.getElementById('order').innerHTML = `${this.first_name}`;
     }
 
 }

@@ -4,26 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style2.css">
+  <script src="main.js"></script>
   <title>Main Game</title>
 </head>
 <body>
 
-  <div class="navigation">
-    <ul>
-      <script>
-        let icons = ["home", "person", "chatbubble", "camera", "settings"]
-        for (let i of icons) {
-          document.write(`<li><a href="#"><span class="icon"><ion-icon name="${i}-outline"></ion-icon></span></a></li>`); 
-        }
-      </script>
-      <div class="indicator"><span></span></div>
-    </ul>
+  <div class="FABMenu">
+    <input type="checkbox" checked/>
+    <div class="hamburger">
+      <div class="dots">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+      </div>
+    </div>
+    <div class="action_items_bar">
+      <div class="action_items">
+        <span class="first_item">
+          <i class="material-icons">
+          🍰
+          </i>
+        </span>
+        <span class="second_item">
+          <i class="material-icons">
+            💬
+          </i>
+       </span>
+        <span class="third_item">
+          <i class="material-icons">
+          🏠
+          </i>
+        </span>
+        <span class="fourth_item">
+          <i class="material-icons">
+          💸
+          </i>
+        </span>
+      </div>
+    </div>
   </div>
   <div class="customer">
     <p id="customer_name"></p>
     <p id="order"></p>
   </div>
   <script src="main.js"></script>
+
 
   <div class="counter-display"></div>
 
