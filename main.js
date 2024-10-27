@@ -26,11 +26,13 @@
 //     };
 // }
 
-// // Function to ask the user a new question each time
 // function askQuestion() {
-//     // Generate two random fractions
 //     const fraction1 = generateRandomFraction();
 //     const fraction2 = generateRandomFraction();
+//     const userAnswer = prompt(`The customer wants: ${fraction1.numerator}/${fraction1.denominator} of an apple pie + ${fraction2.numerator}/${fraction2.denominator} of a blueberry pie. How much pie do they want in total?':`);
+
+//     const correctAnswer = addFractions(fraction1, fraction2);
+//     const correctAnswerStr = `${correctAnswer.numerator}/${correctAnswer.denominator}`;
 
 //     // Display the question to the user
 //     const userAnswer = prompt(`The customer wants: ${fraction1.numerator}/${fraction1.denominator} of an apple pie + ${fraction2.numerator}/${fraction2.denominator} of a blueberry pie. How much pie do they want in total?':`);
@@ -67,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     }
-
-
-
 
 
     class Customer {

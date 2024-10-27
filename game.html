@@ -57,7 +57,42 @@
   </div>
  >
   <div class="counter-display"></div>
-  
-  <script src="main.js"></script>
+  <title>Image Moving to Center</title>
+  <style>
+      body {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative; 
+          height: 100vh;
+          overflow: hidden;
+          
+      }
+
+      .floating {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          padding: 0;
+          width: 450px;
+          height: auto;
+          animation: moveToCenter 3s forwards;
+      }
+
+      @keyframes moveToCenter {
+          0% {
+              left: 0;
+          }
+          100% {
+              left: calc(50% - 225px);
+          }
+      }
+  </style>
+</head>
+<body>
+
+<img src="npc.png" alt="npc girl customer" class="floating">
+
 </body>
 </html>

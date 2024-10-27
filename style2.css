@@ -58,8 +58,9 @@ body {
     padding: 0 25px;
     border-radius: 15%;
     align-self: center;
-    transform: translateX(-100px);
+    transform: translateX(-200px);
     z-index: 100;
+    position: absolute;
 }
 
 #customer_name {
@@ -72,14 +73,16 @@ body {
 }
 
 .reciept {
+    display: flex;
     width: 30%;
     height: 60%;
     background-color: white;
-    transform: translateY(30%) translateX(60%);
+    transform: translateX(120%) translateY(-10%);
     z-index: 1000;
     justify-content: center;
     padding: 0 15px;
     justify-content: space-between;
+    position: absolute;
 }
 
 .inputs {
@@ -88,7 +91,7 @@ body {
     gap: 120px;
     width: 40px;
     height: 10%;
-    transform: translateX(140px) translateY(30px);
+    transform: translateY(30px);
 
 
 
@@ -414,7 +417,7 @@ h1 {
     padding-left: 35px;
     opacity: 0;
     transition: all .2s ease-in-out;
-    cursor: pointer;
+    <<<<<<< HEAD cursor: pointer;
 }
 
 .first_item {
@@ -453,3 +456,45 @@ h1 {
     opacity: 1;
     transition-delay: .45s;
 }
+
+=======cursor:pointer;
+}
+
+.first_item {
+    left: 0%;
+}
+
+.second_item {
+    left: 15%;
+}
+
+.third_item {
+    left: 55%;
+}
+
+.fourth_item {
+    left: 70%;
+}
+
+.FABMenu input:checked~.action_items_bar .action_items .first_item {
+    opacity: 1;
+    transition-delay: .45s;
+}
+
+.FABMenu input:checked~.action_items_bar .action_items .second_item {
+    opacity: 1;
+    transition-delay: .40s;
+
+}
+
+.FABMenu input:checked~.action_items_bar .action_items .third_item {
+    opacity: 1;
+    transition-delay: .40s;
+}
+
+.FABMenu input:checked~.action_items_bar .action_items .fourth_item {
+    opacity: 1;
+    transition-delay: .45s;
+}
+
+>>>>>>>cd3a101f29f60b88a1a8f9a4c43c8bc0e7a3ec71
