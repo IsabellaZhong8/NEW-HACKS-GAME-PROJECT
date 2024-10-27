@@ -125,7 +125,7 @@ body {
   .FABMenu input
   {
     position:absolute;
-    top: 0%;
+    top: 5%;
     left:50%;
     width:80px;
     height:80px;
@@ -137,8 +137,8 @@ body {
   .hamburger
   {
     position:absolute;
-    top:0%;
-    left:50%;
+    top:0.5%;
+    left:48.5%;
     width: 80px;
     height:80px;
     background-color: #E84F3E;
