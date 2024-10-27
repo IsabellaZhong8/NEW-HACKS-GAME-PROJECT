@@ -64,6 +64,7 @@ body {
     background-position: center;
   }
 
-.askQuestion {
-    
+.prompt {
+    background-image:  url("home/cutebakery.jpg") 
+
 }
