@@ -29,6 +29,8 @@ function addFractions(fraction1, fraction2) {
 
 // Function to ask the user a new question each time
 function askQuestion() {
+    //const backgroundImage = "home/cutebakery.jpg";
+    //document.body.style.backgroundImage = `url('${backgroundImage}')`;
     // Generate two random fractions
     const fraction1 = generateRandomFraction();
     const fraction2 = generateRandomFraction();
@@ -48,7 +50,6 @@ function askQuestion() {
         alert(`Incorrect. The customer wants ${correctAnswerStr} pie in total.`);
     }
 }
-
 // Call the askQuestion function each time you want to ask a new question
 askQuestion();
 
@@ -111,9 +112,6 @@ class Game {
         }
         order_text.innerHTML = message;
     }
-
-
-
 
 
 
