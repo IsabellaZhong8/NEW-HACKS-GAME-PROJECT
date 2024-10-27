@@ -13,7 +13,7 @@ body {
 .menu {
     display: flex;
     width: 100%;
-    width: 1300px;
+    width: 100vw;
     height: 200px;
     background-color: rgb(212, 121, 139);
     justify-content: center;
@@ -30,7 +30,7 @@ body {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 0 10px;
 
 }
 
@@ -39,4 +39,10 @@ body {
     width: 50px;
     height: 50px;
     background-color: black;
+}
+
+#order {
+    text-align: center;
+    font-size: 100px;
+
 }
