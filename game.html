@@ -8,7 +8,19 @@
   <title>Main Game</title>
 </head>
 <body>
+  <div class="customer">
+    <p id="customer_name"></p>
+    <p id="order"></p>
+  </div>
+  <div class="reciept">
+    <div class="items"></div>
+    <div class="inputs">
+      <input id="q1">
+      <input id="q2">
+      <input id="q3">
+    </div> 
 
+  </div>
   <div class="FABMenu">
     <input type="checkbox" checked/>
     <div class="hamburger">
@@ -43,8 +55,7 @@
       </div>
     </div>
   </div>
-
-
+ 
   <div class="counter-display"></div>
   <title>Image Moving to Center</title>
   <style>
@@ -56,6 +67,7 @@
           position: relative; 
           height: 100vh;
           overflow: hidden;
+          
       }
 
       .floating {
@@ -80,7 +92,7 @@
 </head>
 <body>
 
-<img src="npc.png" alt="npc girl customer" class="floating">
+<img src="npcgirl.png" alt="npc girl customer" class="floating">
 
 </body>
 </html>
