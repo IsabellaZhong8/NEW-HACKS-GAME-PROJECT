@@ -59,120 +59,123 @@
 //         myImage.setAttribute("src", "https://iili.io/2qSr5Rn.md.png");
 //     }
 // };
+document.addEventListener("DOMContentLoaded", function () {
+    class Food {
+        constructor(food_name, price) {
+            this.food_name = food_name;
+            this.price = price;
+        }
 
-class Food {
-    constructor(food_name, price) {
-        this.food_name = food_name;
-        this.price = price;
     }
 
-}
 
 
 
 
+    class Customer {
+        constructor(first_name, order) {
+            this.first_name = first_name;
+            this.order = order;
+        }
 
-class Customer {
-    constructor(first_name, order) {
-        this.first_name = first_name;
-        this.order = order;
-    }
+        tell_order() {
 
-    tell_order() {
+            let message = 'Can I get ';
+            let add = ' and ';
+            const entries = Array.from(this.order.entries()); // Convert Map to array of entries
+            const lastIndex = entries.length - 1;
 
-        let message = 'Can I get ';
-        let add = ' and ';
-        const entries = Array.from(this.order.entries()); // Convert Map to array of entries
-        const lastIndex = entries.length - 1;
+            for (let i = 0; i < entries.length; i++) {
+                const [foodItem, quantity] = entries[i];
+                const plural = quantity > 1 ? 's' : '';
 
-        for (let i = 0; i < entries.length; i++) {
-            const [foodItem, quantity] = entries[i];
-            const plural = quantity > 1 ? 's' : '';
+                if (i === lastIndex - 1) {
+                    add = ' and '; // Change to 'and' for the last two items
+                } else if (i === lastIndex) {
+                    add = ''; // No additional 'and' for the last item
+                }
 
-            if (i === lastIndex - 1) {
-                add = ' and '; // Change to 'and' for the last two items
-            } else if (i === lastIndex) {
-                add = ''; // No additional 'and' for the last item
+                message += `${quantity} ${foodItem.food_name}${plural}${add} `;
             }
 
-            message += `${quantity} ${foodItem.food_name}${plural}${add} `;
+            document.getElementById('customer_name').innerHTML = `${this.first_name}`;
+            document.getElementById('order').innerHTML = message.trim() + '?';
+
         }
 
-
-        document.getElementById('order').innerHTML = message.trim() + '?';
-        document.getElementById('order').innerHTML = `${this.first_name}`;
     }
 
-}
 
+    const FOODS = [
+        new Food('muffin', 1.25),
+        new Food('cake', 8.50),
+        new Food('pumpkin pie', 10),
+        new Food('cookie', 2.4)
+    ]
 
-const FOODS = [
-    new Food('muffin', 1.25),
-    new Food('cake', 8.50),
-    new Food('pumpkin pie', 10),
-    new Food('coookie', 2.4)
-]
-
-class Game {
-    show_learning_prompt(topic) {
-        let prompt = '';
-        switch (topic) {
-            case 'Fractions':
-                prompt = 'Let’s explore fractions together!';
-                break;
-            case 'Division':
-                prompt = 'Let’s dive into division!';
-                break;
-            case 'Literacy':
-                prompt = 'Ready to boost your literacy skills?';
-                break;
-            case 'Programming':
-                prompt = 'Time to code and learn programming!';
-                break;
-            default:
-                throw new Error('This is not a valid topic!');
-        }
-        return prompt;
-    }
-}
-
-
-
-const NAMES = ['Joe', 'Meradith', 'Barbara', 'Christain', 'Blair']
-
-
-class Main {
-    run() {
-        const num_foods_in_order = 3;
-        let orders = new Map();
-        let ran_quantity = 0;
-        let ran_food = 0;
-        const ran_name = Math.floor(Math.random() * NAMES.length) + 1;
-
-        for (let i = 0; i < num_foods_in_order; i++) {
-            ran_quantity = Math.floor(Math.random() * 5) + 1;
-            ran_food = Math.floor(Math.random() * FOODS.length);
-
-            const foodItem = FOODS[ran_food];
-
-            if (orders.has(foodItem)) {
-                orders.set(foodItem, orders.get(foodItem) + ran_quantity);
-            } else {
-                orders.set(foodItem, ran_quantity);
+    class Game {
+        show_learning_prompt(topic) {
+            let prompt = '';
+            switch (topic) {
+                case 'Fractions':
+                    prompt = 'Let’s explore fractions together!';
+                    break;
+                case 'Division':
+                    prompt = 'Let’s dive into division!';
+                    break;
+                case 'Literacy':
+                    prompt = 'Ready to boost your literacy skills?';
+                    break;
+                case 'Programming':
+                    prompt = 'Time to code and learn programming!';
+                    break;
+                default:
+                    throw new Error('This is not a valid topic!');
             }
+            return prompt;
         }
-
-        const customer = new Customer(NAMES[ran_name], orders);
-
-
-        customer.tell_order();
-
     }
 
 
-}
 
-new Main().run()
+    const NAMES = ['Joe', 'Meradith', 'Barbara', 'Christain', 'Blair'];
+
+
+    class Main {
+        run() {
+            const num_foods_in_order = 3;
+            let orders = new Map();
+            let ran_quantity = 0;
+            let ran_food = 0;
+            const ran_name = Math.floor(Math.random() * NAMES.length);
+
+            for (let i = 0; i <= num_foods_in_order; i++) {
+                ran_quantity = Math.floor(Math.random() * 5) + 1;
+                ran_food = Math.floor(Math.random() * FOODS.length);
+
+                const foodItem = FOODS[ran_food];
+
+                if (orders.has(foodItem)) {
+                    orders.set(foodItem, orders.get(foodItem) + ran_quantity);
+                } else {
+                    orders.set(foodItem, ran_quantity);
+                }
+            }
+
+            const customer = new Customer(NAMES[ran_name], orders);
+
+
+            customer.tell_order();
+
+        }
+
+
+
+    }
+
+    new Main().run()
+})
+
 
 /*Nav bar*/
 // let list = document.querySelectorAll(".navigation li");
