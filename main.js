@@ -1,23 +1,19 @@
 const myImage = document.querySelector('img');
 
-// Function to generate a random integer between min and max (inclusive)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Function to generate a fraction with numerator and denominator from 1-10
 function generateRandomFraction() {
     const numerator = getRandomInt(1, 10);
     const denominator = getRandomInt(1, 10);
     return { numerator, denominator };
 }
 
-// Function to add two fractions
 function addFractions(fraction1, fraction2) {
     const numerator = (fraction1.numerator * fraction2.denominator) + (fraction2.numerator * fraction1.denominator);
     const denominator = fraction1.denominator * fraction2.denominator;
 
-    // Simplify the fraction
     const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
     const commonDivisor = gcd(numerator, denominator);
 
@@ -27,7 +23,6 @@ function addFractions(fraction1, fraction2) {
     };
 }
 
-// Function to ask the user a new question each time
 function askQuestion() {
     const fraction1 = generateRandomFraction();
     const fraction2 = generateRandomFraction();
