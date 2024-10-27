@@ -79,7 +79,7 @@ class Customer {
     }
 
     tell_order() {
-        const order_text = document.getElementById('order');
+
         let message = 'Can I get ';
         let add = ' and ';
         const entries = Array.from(this.order.entries()); // Convert Map to array of entries
@@ -98,7 +98,9 @@ class Customer {
             message += `${quantity} ${foodItem.food_name}${plural}${add} `;
         }
 
-        order_text.innerHTML = message.trim() + '?';
+        document.getElementById('customer_name').innerHTML = `${this.first_name}`
+        document.getElementById('order').innerHTML = message.trim() + '?';
+
     }
 
 }
@@ -136,7 +138,7 @@ class Game {
 
 
 
-
+const NAMES = ['Joe', 'Meradith', 'Barbara', 'Christain', 'Blair']
 
 
 class Main {
@@ -145,6 +147,7 @@ class Main {
         let orders = new Map();
         let ran_quantity = 0;
         let ran_food = 0;
+        const ran_name = Math.floor(Math.random() * NAMES.length) + 1;
 
         for (let i = 0; i < num_foods_in_order; i++) {
             ran_quantity = Math.floor(Math.random() * 5) + 1;
@@ -159,7 +162,7 @@ class Main {
             }
         }
 
-        const customer = new Customer('Joe', orders);
+        const customer = new Customer(NAMES[ran_name], orders);
 
 
         customer.tell_order();
