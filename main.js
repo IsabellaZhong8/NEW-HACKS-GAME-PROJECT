@@ -29,27 +29,20 @@ function addFractions(fraction1, fraction2) {
 
 // Function to ask the user a new question each time
 function askQuestion() {
-    // Generate two random fractions
     const fraction1 = generateRandomFraction();
     const fraction2 = generateRandomFraction();
-
-    // Display the question to the user
     const userAnswer = prompt(`The customer wants: ${fraction1.numerator}/${fraction1.denominator} of an apple pie + ${fraction2.numerator}/${fraction2.denominator} of a blueberry pie. How much pie do they want in total?':`);
-
-    // Calculate the correct answer
+    
     const correctAnswer = addFractions(fraction1, fraction2);
     const correctAnswerStr = `${correctAnswer.numerator}/${correctAnswer.denominator}`;
 
-    // Check if the user's answer is correct
     if (userAnswer === correctAnswerStr) {
         alert(`Correct! The customer wants ${correctAnswerStr} pie in total.`);
-        counter = counter + 1
+        money = money + 1
     } else {
         alert(`Incorrect. The customer wants ${correctAnswerStr} pie in total.`);
     }
 }
-
-// Call the askQuestion function each time you want to ask a new question
 askQuestion();
 
 myImage.onClick = () => {
@@ -111,9 +104,6 @@ class Game {
         }
         order_text.innerHTML = message;
     }
-
-
-
 
 
 
