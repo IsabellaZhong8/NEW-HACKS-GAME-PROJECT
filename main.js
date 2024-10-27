@@ -175,6 +175,10 @@ document.addEventListener("DOMContentLoaded", function () {
     new Main().run()
 })
 
+// random images
+//var images = new Array("npc.png", "boy.png")
+//var randomNum = Math.floor(Math.random() * images.length);
+//document.getElementById("npc.png").src = images[randomNum]
 
 /*Nav bar*/
 // let list = document.querySelectorAll(".navigation li");
